@@ -62,16 +62,24 @@
 
   /* Nav */
   const nav = $("#nav");
-  addEventListener("scroll", () => nav.classList.toggle("stuck", scrollY > 10), { passive: true });
+  const fab = $("#fab");
+  addEventListener("scroll", () => {
+    nav.classList.toggle("stuck", scrollY > 10);
+    // Hero geçilince menü butonu belirsin; en alttaki "Menüyü Aç" alanına gelince gizlensin
+    const nearEnd = innerHeight + scrollY > document.body.scrollHeight - 420;
+    fab.classList.toggle("show", scrollY > innerHeight * 0.7 && !nearEnd);
+  }, { passive: true });
   $("#burger").addEventListener("click", () => nav.classList.toggle("open"));
   $("#links").addEventListener("click", (e) => e.target.closest("a") && nav.classList.remove("open"));
 
-  /* Çikolatayı tekrar dök */
-  $("#stage").addEventListener("click", () => {
-    const svg = $("#stage .scene");
-    const clone = svg.cloneNode(true);
-    svg.replaceWith(clone);
-  });
+  /* Tanıtım videosu: hareket azaltma tercihinde durdur, ekrandan çıkınca duraklat */
+  const vid = document.querySelector(".hero-video");
+  if (vid) {
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) vid.removeAttribute("autoplay"), vid.pause();
+    else if ("IntersectionObserver" in window) {
+      new IntersectionObserver(([e]) => { e.isIntersecting ? vid.play().catch(() => {}) : vid.pause(); }).observe(vid);
+    }
+  }
 
   /* Görününce belir */
   const reveal = document.querySelectorAll(".reveal, .d-card, .tile, .split-img, .event, .final, .card-band");

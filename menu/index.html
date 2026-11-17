@@ -79,8 +79,9 @@
         <a class="round" href="https://www.instagram.com/caravecoffee/" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
         </a>
-        <a class="round" href="../" aria-label="Ana sayfa">
+        <a class="pill" href="../">
           <svg viewBox="0 0 24 24"><path d="M3 9.5 12 3l9 6.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.5z"/><path d="M9 22V12h6v10"/></svg>
+          Web Sitesi
         </a>
       </div>
     </div>
@@ -91,7 +92,7 @@
       <div class="shell">
         <nav class="kinds" id="kinds"></nav>
         <div class="search-row">
-          <button type="button" class="back" id="back" hidden>
+          <button type="button" class="back" id="back" aria-label="Kategorilere dön" hidden>
             <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
             <span>Kategoriler</span>
           </button>
@@ -108,6 +109,14 @@
 
   <footer class="foot">
     <div class="shell">
+      <a class="site-card" href="../">
+        <img src="../assets/img/carave-kek.jpg" alt="" loading="lazy" />
+        <span>
+          <small>Carave Coffee</small>
+          <b>Hikâyemiz, kahve kartı ve etkinlikler</b>
+        </span>
+        <i>Siteye Git <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></i>
+      </a>
       <p>Alerjen ve içerik bilgisi için lütfen personelimize danışınız.</p>
       <p>© <span id="year"></span> Carave Coffee · Giresun</p>
     </div>
@@ -119,7 +128,7 @@
       <b>8 kahveye 1 kahve bizden!</b>
       <small>Kahve kartını her siparişte damgalat</small>
     </div>
-    <a class="promo-btn" href="../#kart">Detay <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></a>
+    <a class="promo-btn" href="../#kart" aria-label="Kahve kartı detayı"><span>Detay</span> <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></a>
     <button class="promo-x" id="promoX" aria-label="Kapat"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </aside>
 

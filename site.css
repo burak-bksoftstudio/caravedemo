@@ -76,22 +76,23 @@ h2 { font-size: clamp(26px, 4.4vw, 40px); margin-top: 8px; }
 
 .hero-art { position: relative; }
 .stage {
-  position: relative; aspect-ratio: 1.1; border-radius: 32px; background: var(--card); border: 1px solid var(--line);
-  box-shadow: var(--shadow); display: grid; place-items: center; cursor: pointer; overflow: hidden;
-  background-image: radial-gradient(circle at 50% 110%, var(--brand-soft), transparent 60%);
+  position: relative; width: min(360px, 100%); margin: 0 auto; aspect-ratio: 9 / 16; border-radius: 34px; overflow: hidden;
+  background: #2B1A10; border: 6px solid var(--card); box-shadow: var(--shadow), 0 30px 60px -30px rgba(60,35,15,.45);
 }
-.replay { position: absolute; bottom: 14px; left: 50%; translate: -50% 0; font-size: 12px; font-weight: 600; color: var(--muted); opacity: 0; transition: opacity .2s; }
-.stage:hover .replay { opacity: 1; }
-.chip-photo { position: absolute; width: 34%; background: var(--card); padding: 6px 6px 8px; border-radius: 16px; box-shadow: var(--shadow); border: 1px solid var(--line); animation: bob 6s ease-in-out infinite; }
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.chip-photo { position: absolute; width: 30%; z-index: 2; background: var(--card); padding: 6px 6px 8px; border-radius: 16px; box-shadow: var(--shadow); border: 1px solid var(--line); animation: bob 6s ease-in-out infinite; }
 .chip-photo img { aspect-ratio: 1; object-fit: cover; border-radius: 11px; width: 100%; }
-.chip-photo figcaption { font-size: 11.5px; font-weight: 700; text-align: center; margin-top: 6px; }
-.p1 { left: -6%; top: -6%; rotate: -6deg; }
-.p2 { right: -5%; bottom: -8%; rotate: 5deg; animation-delay: -3s; }
+.chip-photo figcaption { font-size: 11.5px; font-weight: 700; text-align: center; margin-top: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 860px) { .chip-photo figcaption { font-size: 10px; } }
+.p1 { left: 0; top: 8%; rotate: -7deg; }
+.p2 { right: 0; bottom: 10%; rotate: 6deg; animation-delay: -3s; }
 @keyframes bob { 50% { transform: translateY(-8px); } }
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; padding-top: 22px; gap: 50px; }
-  .hero-art { width: min(440px, 88%); margin: 0 auto; }
+  .hero-art { width: min(400px, 100%); margin: 0 auto; }
+  .stage { width: min(300px, 74%); }
+  .chip-photo { width: 28%; }
 }
 
 /* ---------- Scene ---------- */
@@ -204,6 +205,18 @@ h2 { font-size: clamp(26px, 4.4vw, 40px); margin-top: 8px; }
 .foot-info b { color: var(--ink); }
 .foot-links { display: flex; gap: 18px; font-size: 14px; font-weight: 600; color: var(--brand); }
 .copy { text-align: center; font-size: 12px; color: var(--muted); margin-top: 22px; }
+
+/* sabit menü butonu */
+.fab {
+  position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom)); z-index: 60;
+  display: inline-flex; align-items: center; gap: 9px; height: 54px; padding: 0 24px 0 20px; border-radius: 99px;
+  background: var(--brand); color: #fff; font-weight: 700; font-size: 15px;
+  box-shadow: 0 14px 30px -10px rgba(110, 62, 29, .7), 0 0 0 4px rgba(250, 246, 241, .9);
+  transform: translate(-50%, 130%); opacity: 0; pointer-events: none; transition: transform .4s cubic-bezier(.2,.8,.2,1), opacity .3s, background .2s;
+}
+.fab svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.fab.show { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+.fab:hover { background: var(--brand-d); }
 
 /* reveal */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
