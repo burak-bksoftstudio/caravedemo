@@ -3,141 +3,210 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Carave Coffee · Menü</title>
-  <meta name="description" content="Carave Coffee dijital menü." />
+  <title>Carave Coffee · Şehrin en tatlı kahve kaçamağı</title>
+  <meta name="description" content="Carave Coffee — el yapımı, her gün taze tatlılar ve özenle hazırlanan kahveler. Şehrin en tatlı kahve kaçamağı." />
   <meta name="theme-color" content="#FAF6F1" />
+  <meta property="og:title" content="Carave Coffee" />
+  <meta property="og:description" content="Şehrin en tatlı kahve kaçamağı 🤎" />
+  <meta property="og:image" content="assets/img/san-sebastian.jpg" />
   <link rel="icon" href="assets/logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="site.css" />
 </head>
 <body>
 
-  <div id="loader" aria-hidden="true">
-    <svg class="scene" viewBox="0 -14 260 182">
-      <!-- tabak -->
-      <ellipse cx="100" cy="146" rx="84" ry="15" fill="#fff" stroke="#E8DCCD" stroke-width="1.5"/>
-      <ellipse cx="100" cy="144" rx="62" ry="9" fill="none" stroke="#F1E8DD" stroke-width="1.5"/>
-
-      <!-- pasta gövdesi -->
-      <path d="M42 92 V140 A58 13 0 0 0 158 140 V92 A58 13 0 0 1 42 92Z" fill="#E9C48E"/>
-      <path d="M42 110 A58 13 0 0 0 158 110 V115 A58 13 0 0 1 42 115Z" fill="#FFF4E4"/>
-      <path d="M42 126 A58 13 0 0 0 158 126 V131 A58 13 0 0 1 42 131Z" fill="#FFF4E4"/>
-      <path d="M42 92 V140 A58 13 0 0 0 66 150 V102 A58 13 0 0 1 42 92Z" fill="#000" opacity=".05"/>
-      <ellipse cx="100" cy="92" rx="58" ry="13" fill="#F2D6A8"/>
-
-      <!-- çikolata kaplama + damlalar -->
-      <g class="choco">
-        <path class="coat" d="M42 92 A58 13 0 0 1 158 92 V96 Q154 106 148 103 Q140 108 132 106 Q124 112 116 108 Q108 113 100 110 Q90 114 84 109 Q76 110 70 107 Q60 108 54 103 Q46 102 42 96Z" fill="#5A2E14"/>
-        <ellipse class="shine" cx="88" cy="90" rx="22" ry="4" fill="#fff" opacity=".18"/>
-        <line class="drip d1" x1="70" y1="106" x2="70" y2="124" />
-        <line class="drip d2" x1="117" y1="108" x2="117" y2="134" />
-        <line class="drip d3" x1="148" y1="102" x2="148" y2="114" />
-        <line class="drip d4" x1="93" y1="111" x2="93" y2="121" />
-        <line class="drip d5" x1="54" y1="102" x2="54" y2="110" />
-      </g>
-
-      <!-- akan çikolata -->
-      <line class="stream" x1="100" y1="-2" x2="100" y2="92" />
-      <g class="splash">
-        <circle cx="90" cy="88" r="2.2"/><circle cx="111" cy="86" r="1.8"/><circle cx="104" cy="83" r="1.4"/>
-      </g>
-
-      <!-- sos kabı -->
-      <g class="jug">
-        <path d="M70 -12 H96 L94 8 Q93 14 83 14 Q73 14 72 8Z" fill="#8B522A"/>
-        <path d="M95 -10 L104 -6 L96 -2Z" fill="#8B522A"/>
-        <path d="M71 -6 Q62 -4 64 4 Q66 9 72 6" fill="none" stroke="#8B522A" stroke-width="3"/>
-        <rect x="70" y="-14" width="27" height="3" rx="1.5" fill="#6E3E1D"/>
-      </g>
-
-      <!-- kahve -->
-      <ellipse cx="213" cy="148" rx="38" ry="8" fill="#fff" stroke="#E8DCCD" stroke-width="1.5"/>
-      <path d="M239 117 Q252 116 251 127 Q249 137 236 134" fill="none" stroke="#fff" stroke-width="6"/>
-      <path d="M239 117 Q252 116 251 127 Q249 137 236 134" fill="none" stroke="#E8DCCD" stroke-width="1.5"/>
-      <path d="M186 110 H240 L236 134 Q233 146 213 146 Q193 146 190 134Z" fill="#fff" stroke="#E8DCCD" stroke-width="1.5"/>
-      <path d="M188 122 H238 L237 128 H189Z" fill="#8B522A"/>
-      <ellipse cx="213" cy="110" rx="27" ry="5" fill="#6B3A1A"/>
-      <path d="M213 113 C208 109 205 106 208 105 C210 104 212 106 213 107 C214 106 216 104 218 105 C221 106 218 109 213 113Z" fill="#F3E2CB"/>
-      <g class="steam">
-        <path class="s1" d="M203 100 q-6 -8 0 -16 q6 -8 0 -16"/>
-        <path class="s2" d="M213 98 q-6 -8 0 -16 q6 -8 0 -16"/>
-        <path class="s3" d="M223 100 q-6 -8 0 -16 q6 -8 0 -16"/>
-      </g>
-    </svg>
-    <img class="loader-logo" src="assets/logo.jpg" alt="" />
-    <b>MENÜ HAZIRLANIYOR</b>
-    <small id="loaderCount">TATLI · KAHVE · KEYİF</small>
-  </div>
-
-  <header class="top">
-    <div class="shell top-row">
-      <a href="./" class="brand" aria-label="Carave Coffee ana sayfa"><img src="assets/logo.jpg" alt="Carave Coffee" /></a>
-      <div class="top-actions">
-        <a class="round" href="https://www.instagram.com/caravecoffee/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
-        </a>
-        <a class="round" href="./" aria-label="Ana sayfa">
-          <svg viewBox="0 0 24 24"><path d="M3 9.5 12 3l9 6.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.5z"/><path d="M9 22V12h6v10"/></svg>
-        </a>
-      </div>
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="wrap nav-row">
+      <a href="#top" class="logo" aria-label="Carave Coffee"><img src="assets/logo-tight.jpg" alt="Carave Coffee" /></a>
+      <nav class="links" id="links">
+        <a href="#tatlilar">Tatlılar</a>
+        <a href="#kahve">Kahve</a>
+        <a href="#kart">Kahve Kartı</a>
+        <a href="#etkinlik">Etkinlikler</a>
+        <a href="https://www.instagram.com/caravecoffee/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <a class="btn btn-sm" href="menu/">Menü <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <button class="burger" id="burger" aria-label="Menüyü aç"><span></span><span></span></button>
     </div>
   </header>
 
-  <main class="menu" id="menu" data-view="categories">
-    <div class="toolbar">
-      <div class="shell">
-        <nav class="kinds" id="kinds"></nav>
-        <div class="search-row">
-          <button type="button" class="back" id="back" hidden>
-            <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            <span>Kategoriler</span>
-          </button>
-          <label class="search">
-            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-            <input id="q" type="search" autocomplete="off" />
-          </label>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero wrap">
+      <div class="hero-txt">
+        <span class="kicker">Carave Coffee</span>
+        <h1>Şehrin en <span class="hl">tatlı</span> kahve kaçamağı.</h1>
+        <p>El yapımı, her gün taze tatlılar ve özenle demlenen kahveler. İster otur sohbete dal, ister kahveni al şehri gez.</p>
+        <div class="cta">
+          <a class="btn" href="menu/">Menüyü İncele <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/caravecoffee/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>@caravecoffee
+          </a>
+        </div>
+        <ul class="facts">
+          <li><b>El yapımı</b><span>tatlılar</span></li>
+          <li><b>Her gün</b><span>taze vitrin</span></li>
+          <li><b>8 + 1</b><span>kahve bizden</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-art">
+        <div class="stage" id="stage" title="Bir daha dök!">
+          <svg class="scene" viewBox="0 -14 260 182" aria-hidden="true">
+            <ellipse cx="100" cy="146" rx="84" ry="15" fill="#fff" stroke="#E8DCCD" stroke-width="1.5"/>
+            <ellipse cx="100" cy="144" rx="62" ry="9" fill="none" stroke="#F1E8DD" stroke-width="1.5"/>
+            <path d="M42 92 V140 A58 13 0 0 0 158 140 V92 A58 13 0 0 1 42 92Z" fill="#E9C48E"/>
+            <path d="M42 110 A58 13 0 0 0 158 110 V115 A58 13 0 0 1 42 115Z" fill="#FFF4E4"/>
+            <path d="M42 126 A58 13 0 0 0 158 126 V131 A58 13 0 0 1 42 131Z" fill="#FFF4E4"/>
+            <path d="M42 92 V140 A58 13 0 0 0 66 150 V102 A58 13 0 0 1 42 92Z" fill="#000" opacity=".05"/>
+            <ellipse cx="100" cy="92" rx="58" ry="13" fill="#F2D6A8"/>
+            <g>
+              <path class="coat" d="M42 92 A58 13 0 0 1 158 92 V96 Q154 106 148 103 Q140 108 132 106 Q124 112 116 108 Q108 113 100 110 Q90 114 84 109 Q76 110 70 107 Q60 108 54 103 Q46 102 42 96Z" fill="#5A2E14"/>
+              <ellipse class="shine" cx="88" cy="90" rx="22" ry="4" fill="#fff"/>
+              <line class="drip d1" x1="70" y1="106" x2="70" y2="124"/>
+              <line class="drip d2" x1="117" y1="108" x2="117" y2="134"/>
+              <line class="drip d3" x1="148" y1="102" x2="148" y2="114"/>
+              <line class="drip d4" x1="93" y1="111" x2="93" y2="121"/>
+              <line class="drip d5" x1="54" y1="102" x2="54" y2="110"/>
+            </g>
+            <line class="stream" x1="100" y1="-2" x2="100" y2="92"/>
+            <g class="splash"><circle cx="90" cy="88" r="2.2"/><circle cx="111" cy="86" r="1.8"/><circle cx="104" cy="83" r="1.4"/></g>
+            <g class="jug">
+              <path d="M70 -12 H96 L94 8 Q93 14 83 14 Q73 14 72 8Z" fill="#8B522A"/>
+              <path d="M95 -10 L104 -6 L96 -2Z" fill="#8B522A"/>
+              <path d="M71 -6 Q62 -4 64 4 Q66 9 72 6" fill="none" stroke="#8B522A" stroke-width="3"/>
+              <rect x="70" y="-14" width="27" height="3" rx="1.5" fill="#6E3E1D"/>
+            </g>
+            <ellipse cx="213" cy="148" rx="38" ry="8" fill="#fff" stroke="#E8DCCD" stroke-width="1.5"/>
+            <path d="M239 117 Q252 116 251 127 Q249 137 236 134" fill="none" stroke="#fff" stroke-width="6"/>
+            <path d="M239 117 Q252 116 251 127 Q249 137 236 134" fill="none" stroke="#E8DCCD" stroke-width="1.5"/>
+            <path d="M186 110 H240 L236 134 Q233 146 213 146 Q193 146 190 134Z" fill="#fff" stroke="#E8DCCD" stroke-width="1.5"/>
+            <path d="M188 122 H238 L237 128 H189Z" fill="#8B522A"/>
+            <ellipse cx="213" cy="110" rx="27" ry="5" fill="#6B3A1A"/>
+            <path d="M213 113 C208 109 205 106 208 105 C210 104 212 106 213 107 C214 106 216 104 218 105 C221 106 218 109 213 113Z" fill="#F3E2CB"/>
+            <g class="steam">
+              <path class="s1" d="M203 100 q-6 -8 0 -16 q6 -8 0 -16"/>
+              <path class="s2" d="M213 98 q-6 -8 0 -16 q6 -8 0 -16"/>
+              <path class="s3" d="M223 100 q-6 -8 0 -16 q6 -8 0 -16"/>
+            </g>
+          </svg>
+          <span class="replay">↻ bir daha dök</span>
+        </div>
+        <figure class="chip-photo p1"><img src="assets/img/san-sebastian.jpg" alt="San Sebastian" /><figcaption>San Sebastian</figcaption></figure>
+        <figure class="chip-photo p2"><img src="assets/img/latte.jpg" alt="Latte" /><figcaption>Latte</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div>
+
+    <!-- TATLILAR -->
+    <section class="sec wrap" id="tatlilar">
+      <div class="sec-head">
+        <div>
+          <span class="kicker">Vitrinde bugün</span>
+          <h2>El yapımı, her gün taze.</h2>
+          <p>Hangisini seçeceğine karar veremedin mi? Vitrinin önüne gel, hepsine bir göz at.</p>
+        </div>
+        <a class="link" href="menu/?menu=tatli">Tüm tatlılar <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+      <div class="rail" id="dessertRail"></div>
+    </section>
+
+    <!-- KAHVE -->
+    <section class="sec wrap split" id="kahve">
+      <div class="split-img">
+        <img src="assets/img/cappuccino.jpg" alt="Cappuccino" loading="lazy" />
+        <img class="small" src="assets/img/sutlu-turk.jpg" alt="Türk kahvesi" loading="lazy" />
+      </div>
+      <div class="split-txt">
+        <span class="kicker">Kahve</span>
+        <h2>Bir yudum enerji, bir fincan huzur.</h2>
+        <p>Klasiklerden yeni tatlara latte çeşitlerimiz, köpüğüyle Türk kahvesi, buz gibi soğuk kahveler… Makinemizi gördün, şimdi kahvemizi dene.</p>
+        <div class="tiles" id="coffeeTiles"></div>
+      </div>
+    </section>
+
+    <!-- KAHVE KARTI -->
+    <section class="sec wrap" id="kart">
+      <div class="card-band">
+        <div class="band-txt">
+          <span class="kicker light">Kahve Kartı</span>
+          <h2>8 kahve siparişine<br/>1 kahve bizden!</h2>
+          <p>Her kahvende kartını damgalat, dokuzuncu kahve Carave'den.</p>
+        </div>
+        <div class="stamp-card" id="stampCard" aria-label="8 damga, 1 hediye kahve">
+          <div class="sc-top"><img src="assets/logo-tight.jpg" alt="" /><span>KAHVE KARTI</span></div>
+          <div class="stamps" id="stamps"></div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="shell" id="view"></div>
+    <!-- MOOD -->
+    <section class="sec wrap" id="mood">
+      <div class="sec-head center">
+        <div>
+          <span class="kicker">#CaraveMood</span>
+          <h2>Mola zamanı, buluşma noktası.</h2>
+        </div>
+      </div>
+      <div class="moods">
+        <article class="mood reveal">
+          <img src="assets/img/carave-kek.jpg" alt="" loading="lazy" />
+          <blockquote>“İlk çatal tatlıdan, ilk yudum kahveden… Gerisi keyifli bir sohbet.”</blockquote>
+        </article>
+        <article class="mood reveal">
+          <img src="assets/img/flat-white.jpg" alt="" loading="lazy" />
+          <blockquote>“Biraz çalışırım” derken kendini mola modunda bulmak.</blockquote>
+        </article>
+        <article class="mood reveal">
+          <img src="assets/img/iced-latte.jpg" alt="" loading="lazy" />
+          <blockquote>Seçim belli, buluşma noktası Carave.</blockquote>
+        </article>
+      </div>
+    </section>
+
+    <!-- ETKİNLİK -->
+    <section class="sec wrap" id="etkinlik">
+      <div class="event">
+        <img src="assets/img/mozaik.jpg" alt="" loading="lazy" />
+        <div class="event-txt">
+          <span class="kicker">Etkinlikler</span>
+          <h2>Workshop'lar &amp; tatlı buluşmalar</h2>
+          <p>Lalcakery ile pasta workshop'umuzu gerçekleştirdik. Sıradaki etkinlikleri ilk Instagram'da duyuruyoruz, takipte kal.</p>
+          <a class="btn" href="https://www.instagram.com/caravecoffee/" target="_blank" rel="noopener">Takip Et <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QR / MENÜ CTA -->
+    <section class="sec wrap">
+      <div class="final">
+        <svg class="bean" viewBox="0 0 100 100" aria-hidden="true"><path d="M47 6c8 0 14 4 18 10 5 7 7 16 5 23-3 10-15 13-21 24-4 7-5 16-3 24 1 4-3 7-7 5C22 83 12 67 12 49 12 33 20 19 32 11c4-3 9-5 15-5z"/><path d="M60 9c-3-2-7 1-6 4 2 9 1 18-2 25-6 13-19 15-22 26-2 7 0 16 5 23 4 6 10 10 18 10 6 0 11-2 15-5 12-9 20-23 20-38 0-19-11-36-28-45z"/></svg>
+        <h2>Canın ne çekiyor?</h2>
+        <p>Tatlılar, kahveler ve içecekler; hepsi dijital menümüzde.</p>
+        <a class="btn" href="menu/">Menüyü Aç <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+    </section>
   </main>
 
   <footer class="foot">
-    <div class="shell">
-      <p>Alerjen ve içerik bilgisi için lütfen personelimize danışınız.</p>
-      <p>© <span id="year"></span> Carave Coffee · Giresun</p>
-    </div>
-  </footer>
-
-  <aside class="promo" id="promo">
-    <span class="promo-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></span>
-    <div class="promo-txt">
-      <b>Bizi takip et</b>
-      <small>@caravecoffee · yeni tatlılar ilk orada</small>
-    </div>
-    <a class="promo-btn" href="https://www.instagram.com/caravecoffee/" target="_blank" rel="noopener">Takip Et <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></a>
-    <button class="promo-x" id="promoX" aria-label="Kapat"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-  </aside>
-
-  <div class="modal-bg" id="modalBg"></div>
-  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mName">
-    <button class="modal-x" id="modalX" aria-label="Kapat"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-    <figure class="modal-fig"><img id="mImg" alt="" /></figure>
-    <div class="modal-body">
-      <small id="mCat"></small>
-      <h3 id="mName"></h3>
-      <p id="mDesc"></p>
-      <div class="modal-meta">
-        <span id="mPair"></span>
-        <strong id="mPrice"></strong>
+    <div class="wrap foot-row">
+      <img src="assets/logo-tight.jpg" alt="Carave Coffee" class="foot-logo" />
+      <div class="foot-info" id="visit"></div>
+      <div class="foot-links">
+        <a href="menu/">Dijital Menü</a>
+        <a href="https://www.instagram.com/caravecoffee/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
-  </div>
+    <p class="copy">© <span id="year"></span> Carave Coffee · Şehrin en tatlı kahve kaçamağı 🤎</p>
+  </footer>
 
-  <script src="menu-data.js"></script>
-  <script src="app.js"></script>
+  <script>window.CARAVE_BASE = "";</script>
+  <script src="menu/menu-data.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>

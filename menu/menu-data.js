@@ -16,7 +16,7 @@
    fotoğrafları çekildiğinde aynı isimle assets/img içine koymanız yeterli.
    ========================================================= */
 
-const IMG = (n) => `assets/img/${n}.jpg`;
+const IMG = (n) => `${window.CARAVE_BASE || ""}assets/img/${n}.jpg`;
 
 window.CARAVE_MENU = [
   {

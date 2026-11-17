@@ -117,7 +117,7 @@
     view.innerHTML = list.length
       ? `<div class="row-head"><span class="label">“${esc(state.q)}” için sonuçlar</span><small>${list.length} ürün</small></div>
          <div class="grid products">${list.map((it) => productCard(it, true)).join("")}</div>`
-      : `<div class="empty"><img src="assets/logo.jpg" alt=""><p>Bu aramaya göre bir lezzet bulamadık.</p><button data-clear>Kategorilere Dön</button></div>`;
+      : `<div class="empty"><img src="../assets/logo.jpg" alt=""><p>Bu aramaya göre bir lezzet bulamadık.</p><button data-clear>Kategorilere Dön</button></div>`;
   }
 
   function render() {

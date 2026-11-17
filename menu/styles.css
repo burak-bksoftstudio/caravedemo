@@ -37,9 +37,9 @@ svg { display: block; fill: none; stroke: currentColor; stroke-width: 2.2; strok
   transition: opacity .45s ease, visibility .45s;
 }
 #loader.done { opacity: 0; visibility: hidden; }
-#loader .loader-logo { width: 96px; mix-blend-mode: multiply; margin-top: -6px; animation: fadeUp .6s ease 1.6s both; }
-#loader b { font-size: 12px; font-weight: 700; letter-spacing: .22em; color: var(--ink); animation: fadeUp .6s ease 1.75s both; }
-#loader small { font-size: 10.5px; font-weight: 600; letter-spacing: .2em; color: var(--muted); animation: fadeUp .6s ease 1.9s both; }
+#loader .loader-logo { width: min(200px, 52vw); height: auto; mix-blend-mode: multiply; margin-bottom: 34px; animation: fadeUp .5s ease both; }
+#loader b { font-size: 12px; font-weight: 700; letter-spacing: .22em; color: var(--ink); margin-top: 6px; animation: fadeUp .6s ease .3s both; }
+#loader small { font-size: 10.5px; font-weight: 600; letter-spacing: .2em; color: var(--muted); animation: fadeUp .6s ease .45s both; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } }
 
 /* Açılış sahnesi: tatlıya çikolata dökülüyor, yanında kahve */
@@ -86,8 +86,8 @@ svg { display: block; fill: none; stroke: currentColor; stroke-width: 2.2; strok
 }
 
 /* ---------- Header ---------- */
-.top-row { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-.brand img { height: 60px; width: 60px; object-fit: cover; mix-blend-mode: multiply; }
+.top-row { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+.brand img { height: 62px; width: auto; mix-blend-mode: multiply; }
 .top-actions { display: flex; gap: 8px; }
 .round {
   width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
